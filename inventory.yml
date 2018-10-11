@@ -1,0 +1,60 @@
+CORE:
+  - host: 192.168.122.11
+    static_route:
+      - destination_prefix: 192.168.20.0/24
+        next_hop_address: 10.10.12.2
+      - destination_prefix: 192.168.30.0/24
+        next_hop_address: 10.10.12.2
+      - destination_prefix: 192.168.40.0/24
+        next_hop_address: 10.10.12.2
+      - destination_prefix: 192.168.41.0/24
+        next_hop_address: 10.10.12.2
+      - destination_prefix: 10.10.23.0/24
+        next_hop_address: 10.10.12.2
+      - destination_prefix: 10.10.34.0/24
+        next_hop_address: 10.10.12.2
+
+  - host: 192.168.122.12
+    static_route:
+      - destination_prefix: 192.168.10.0/24
+        next_hop_address: 10.10.12.1
+      - destination_prefix: 192.168.11.0/24
+        next_hop_address: 10.10.12.1
+      - destination_prefix: 192.168.30.0/24
+        next_hop_address: 10.10.23.3
+      - destination_prefix: 192.168.40.0/24
+        next_hop_address: 10.10.23.3
+      - destination_prefix: 192.168.41.0/24
+        next_hop_address: 10.10.23.3
+      - destination_prefix: 10.10.34.0/24
+        next_hop_address: 10.10.23.3
+
+  - host: 192.168.122.13
+    static_route:
+      - destination_prefix: 192.168.10.0/24
+        next_hop_address: 10.10.23.2
+      - destination_prefix: 192.168.11.0/24
+        next_hop_address: 10.10.23.2
+      - destination_prefix: 192.168.20.0/24
+        next_hop_address: 10.10.23.2
+      - destination_prefix: 192.168.40.0/24
+        next_hop_address: 10.10.34.4
+      - destination_prefix: 192.168.41.0/24
+        next_hop_address: 10.10.34.4
+      - destination_prefix: 10.10.12.0/24
+        next_hop_address: 10.10.23.2
+
+  - host: 192.168.122.14
+    static_route:
+      - destination_prefix: 192.168.10.0/24
+        next_hop_address: 10.10.34.3
+      - destination_prefix: 192.168.11.0/24
+        next_hop_address: 10.10.34.3
+      - destination_prefix: 192.168.20.0/24
+        next_hop_address: 10.10.34.3
+      - destination_prefix: 192.168.30.0/24
+        next_hop_address: 10.10.34.3
+      - destination_prefix: 10.10.23.0/24
+        next_hop_address: 10.10.34.3
+      - destination_prefix: 10.10.12.0/24
+        next_hop_address: 10.10.34.3

@@ -1,0 +1,27 @@
+<config>
+   <routing xmlns="urn:ietf:params:xml:ns:yang:ietf-routing">
+      <routing-instance>
+         <name>default</name>
+         <description>default-vrf [read-only]</description>
+         <interfaces/>
+         <routing-protocols>
+            <routing-protocol>
+               <type>static</type>
+               <name>1</name>
+               <static-routes>
+                  <ipv4 xmlns="urn:ietf:params:xml:ns:yang:ietf-ipv4-unicast-routing">
+                     {% for route in route_list %}
+                     <route>
+                        <destination-prefix>{{ route['destination_prefix'] }}</destination-prefix>
+                        <next-hop>
+                           <next-hop-address>{{ route['next_hop_address'] }}</next-hop-address>
+                        </next-hop>
+                     </route>
+                     {% endfor %}
+                  </ipv4>
+               </static-routes>
+            </routing-protocol>
+         </routing-protocols>
+      </routing-instance>
+   </routing>
+</config>
