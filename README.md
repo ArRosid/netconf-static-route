@@ -1,3 +1,4 @@
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/arrosid/netconf-static-route)
 # netconf-static-route
 Configure Cisco IOS XE Static Route using NETCONF
 
